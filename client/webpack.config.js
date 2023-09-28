@@ -11,7 +11,9 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      editor: './src/js/editor.js',
+      header: './src/js/header.js'
       // might have to add another file here, like editor, header or database
     },
     output: {
@@ -25,7 +27,7 @@ module.exports = () => {
       }),
 
       new InjectManifest({
-        swScr: './src-sw.js',
+        swSrc: './src-sw.js',
         swDest: 'src-sw.js',
       }),
 
